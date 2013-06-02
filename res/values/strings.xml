@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartAds</string>
+    <string name="loading_video">Loading video</string>
+    <string name="loading">Loading…</string>
+    <string name="no_content">There is no content to display!</string>
+    <string name="apply">Apply</string>
+    <string name="top">Top</string>
+
+</resources>
