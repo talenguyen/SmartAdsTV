@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anvy.samples.smartads"
-    android:versionCode="7"
-    android:versionName="0.0-r7" >
+    package="com.anvy.projects.dssviewer"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <application
+        android:name="com.anvy.projects.dssviewer.DSSViewerApp"
         android:icon="@drawable/icon"
         android:label="@string/app_name" >
         <activity
-            android:name="com.anvy.samples.smartads.LoadingActivity"
+            android:name="com.anvy.projects.dssviewer.LoadingActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,15 +17,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.anvy.samples.smartads.SettingsActivity" />
-        <activity android:name="com.anvy.samples.smartads.DisplayActivity" />
-    </application>
+        <activity android:name="com.anvy.projects.dssviewer.SettingsActivity" />
+        <activity android:name="com.anvy.projects.dssviewer.DisplayActivity" />
+        <activity android:name="com.anvy.projects.dssviewer.GoogleDriveFileBrowserActivity" />
 
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
+        <provider
+            android:name="com.anvy.projects.dssviewer.data.database.DSSContentProvider"
+            android:authorities="com.anvy.samples.smartads.provider"
+            android:exported="false" />
+
+        <service android:name="com.anvy.projects.dssviewer.cloudservice.GoogleCloudStorageSyncService" />
+
+        <activity
+            android:name="com.anvy.projects.dssviewer.CDKeyActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+    </application>
 
     <uses-sdk
         android:minSdkVersion="3"
         android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
 
 </manifest>

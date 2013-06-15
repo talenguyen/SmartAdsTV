@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.anvy.samples.smartads.view.RotatedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/contentView"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-</com.anvy.samples.smartads.view.RotatedFrameLayout>
+    <com.anvy.projects.dssviewer.view.RotatedFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.anvy.projects.dssviewer.view.RotatedFrameLayout>
+
+    <include
+        android:id="@+id/rotationSettings"
+        android:layout_gravity="center"
+        layout="@layout/selection_rotation"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_select_rotation" />
+
+    <View
+        android:id="@+id/anchor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+
+    <com.anvy.projects.dssviewer.view.RotatedFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/anchor"
+        android:layout_centerHorizontal="true"
+        custom:rotation="rotation_0" >
+
+        <Button
+            android:id="@+id/buttonTop0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top"
+            android:textColor="@android:color/black" />
+    </com.anvy.projects.dssviewer.view.RotatedFrameLayout>
+
+    <com.anvy.projects.dssviewer.view.RotatedFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/anchor"
+        custom:rotation="rotation_90" >
+
+        <Button
+            android:id="@+id/buttonTop90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top"
+            android:textColor="@android:color/black" />
+    </com.anvy.projects.dssviewer.view.RotatedFrameLayout>
+
+    <com.anvy.projects.dssviewer.view.RotatedFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anchor"
+        android:layout_centerHorizontal="true"
+        custom:rotation="rotation_180" >
+
+        <Button
+            android:id="@+id/buttonTop180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top"
+            android:textColor="@android:color/black" />
+    </com.anvy.projects.dssviewer.view.RotatedFrameLayout>
+
+    <com.anvy.projects.dssviewer.view.RotatedFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/anchor"
+        custom:rotation="rotation_270" >
+
+        <Button
+            android:id="@+id/buttonTop270"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top"
+            android:textColor="@android:color/black" />
+    </com.anvy.projects.dssviewer.view.RotatedFrameLayout>
+
+</RelativeLayout>

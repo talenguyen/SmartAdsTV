@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SmartAds</string>
+    <string name="app_name">AnvySmartAds</string>
     <string name="loading_video">Loading video</string>
     <string name="loading">Loading…</string>
+    <string name="loading_completed">Data loaded!</string>
     <string name="no_content">There is no content to display!</string>
     <string name="apply">Apply</string>
     <string name="top">Top</string>
+    <string name="file_has_changed">file has changed</string>
+    <string name="select_cloud_storage">Select cloud storage</string>
+    <string name="enter_cd_key">Enter CD key</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_field_length">Length must be %s</string>
+    <string name="error_incorrect_cd_key">This CD Key is incorrect</string>
+    <string name="action_active">Active</string>
 
 </resources>
